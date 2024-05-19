@@ -18,7 +18,7 @@ const getHumanChoice = () => {
         humanChoice = prompt("Rock Paper or Scissors?", "");
     } while(humanChoice !== "" && !CHOICES.includes(humanChoice.toLowerCase()));
 
-    return humanChoice;
+    return humanChoice.toLowerCase();
 }
 
 console.log(`Human Choice: ${getHumanChoice()}`);
