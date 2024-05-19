@@ -22,3 +22,6 @@ const getHumanChoice = () => {
 }
 
 console.log(`Human Choice: ${getHumanChoice()}`);
+
+let humanScore = 0;
+let computerScore = 0;
