@@ -11,11 +11,11 @@
 
 body {
     display: flex;
-    flex-direction: column;
     gap:36px;
 }
 
 .buttons {
-    align-self: center;
+    align-self: flex-start;
+    flex-grow: 0;
 }
 
