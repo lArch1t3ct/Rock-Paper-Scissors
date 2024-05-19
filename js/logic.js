@@ -53,3 +53,10 @@ const playRound = function (humanChoice, computerChoice) {
         computerScore=0;
     }
 };
+
+const buttonDiv = document.querySelector(".buttons");
+buttonDiv.addEventListener('click', (event) => {
+    const PLAYERS_CHOICE = event.target.textContent.toLowerCase();
+    const COMPUTER_CHOICE = getComputerChoice();
+    playRound(PLAYERS_CHOICE, COMPUTER_CHOICE);
+});
