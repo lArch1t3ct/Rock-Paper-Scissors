@@ -10,8 +10,6 @@ function getComputerChoice(){
     return CHOICES[RANDOM_INDEX];
 }
 
-console.log(`Computer's Choice: ${getComputerChoice()}`);
-
 const getHumanChoice = () => {
     let humanChoice;
     do {
@@ -21,7 +19,17 @@ const getHumanChoice = () => {
     return humanChoice.toLowerCase();
 }
 
-console.log(`Human Choice: ${getHumanChoice()}`);
-
 let humanScore = 0;
 let computerScore = 0;
+
+const playRound = function(humanChoice, computerChoice) {
+    if( humanChoice === computerChoice ) {
+        return 'Draw!';
+    } else if( humanChoice === 'rock' ){
+        return computerChoice === "paper" ? "Computer Won! Paper beats Rock" : "Player Won! Rock beats Scissors";
+    } else if( humanChoice === "paper" ){
+        return computerChoice === "scissors" ? "Computer Won! Scissors Beats Paper" : "Player Won! Paper beats Rock";
+    } else if( humanChoice === "scissors" ){
+        return computerChoice === "Rock" ? "Computer Won! Rock beats Scissors" : "Player Won! Scissors beats Paper";
+    }
+}
