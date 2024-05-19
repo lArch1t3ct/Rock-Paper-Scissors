@@ -42,4 +42,14 @@ const playRound = function (humanChoice, computerChoice) {
             return "Player Won! Scissors beats Paper";
         }
     }
+
+    if(computerScore === 5){
+        alert('Computer Won!');
+        humanScore=0;
+        computerScore=0;
+    } else if (humanScore === 5){
+        alert('Player Won!');
+        humanScore=0;
+        computerScore=0;
+    }
 };
